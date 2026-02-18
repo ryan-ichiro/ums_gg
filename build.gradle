@@ -40,6 +40,7 @@ dependencies {
     implementation "org.apache.grails:grails-data-mongodb-gson-templates"
     implementation "org.apache.grails:grails-databinding"
     implementation "org.apache.grails:grails-events"
+    implementation "org.apache.grails:grails-gsp"
     implementation "org.apache.grails:grails-interceptors"
     implementation "org.apache.grails:grails-logging"
     implementation "org.apache.grails:grails-rest-transforms"
@@ -53,6 +54,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-tomcat"
     implementation "org.springframework.boot:spring-boot-starter-validation"
+    implementation 'org.postgresql:postgresql:42.7.7'
     console "org.apache.grails:grails-console"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "com.zaxxer:HikariCP"
