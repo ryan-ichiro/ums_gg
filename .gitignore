@@ -43,3 +43,6 @@ out/
 Thumbs.db
 .DS_Store
 target/
+
+## any keep orginal application.yml, any changes will not be commited
+grails-app/conf/application.yml
