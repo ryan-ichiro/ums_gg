@@ -3,8 +3,6 @@ package app.sender.business
 import java.time.ZonedDateTime
 
 class UserInfo {
-    Long id
-
     String firstName
     String lastName
     String username
@@ -17,8 +15,6 @@ class UserInfo {
     ZonedDateTime lastUpdatedOnDatetime
 
     static constraints = {
-        id nullable: false, unique: true
-
         firstName nullable: false
         lastName nullable: false
         username nullable: false
@@ -30,7 +26,7 @@ class UserInfo {
 
     static mapping = {
         table                   name: "UMS_USER_INFO"
-        id                      column: "USER_ID", generator: 'native', params:[sequence: 'USER_INFO_SEQ']
+        id                      column: "USER_ID", generator: 'sequence', params:[sequence_name: 'user_info_seq']
 
         firstName               column: "USER_FIRST_NAME"
         lastName                column: "USER_LAST_NAME"

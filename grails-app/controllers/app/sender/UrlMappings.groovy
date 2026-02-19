@@ -14,6 +14,7 @@ class UrlMappings {
 
         group "/userInfo", {
             get "/" (controller: "userInfo", action: "index", method: "GET")
+            post "/" (controller: "userInfo", action: "save", method: "POST")
         }
 
     }
