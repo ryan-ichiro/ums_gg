@@ -17,5 +17,9 @@ class UrlMappings {
             post "/" (controller: "userInfo", action: "save", method: "POST")
         }
 
+        group "/loginUser", {
+            post "/" (controller: "authorization", action: 'login', method: "POST")
+        }
+
     }
 }

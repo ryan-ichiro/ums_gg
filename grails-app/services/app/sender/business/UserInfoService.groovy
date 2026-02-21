@@ -1,5 +1,6 @@
 package app.sender.business
 
+import app.sender.UserInfo
 import grails.gorm.transactions.Transactional
 
 import java.time.ZonedDateTime

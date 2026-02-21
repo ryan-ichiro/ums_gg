@@ -1,4 +1,4 @@
-package app.sender.business
+package app.sender
 
 import java.time.ZonedDateTime
 
