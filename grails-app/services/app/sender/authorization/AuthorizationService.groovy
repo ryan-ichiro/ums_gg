@@ -10,7 +10,7 @@ class AuthorizationService {
         String email = request.email
         String password = request.password
 
-        def successful   = [code: 1, message: "Login Successful, Entering UMS."]
+        Object successful   = [code: 1, message: "Login Successful, Entering UMS."]
         def unsuccessful = [code: 2, message: "Login failed. Email or password is incorrect."]
 
         // Should perform some hash function for password
@@ -22,6 +22,7 @@ class AuthorizationService {
             } else {
                 def userPassword = loginUser.password
                 if(userPassword == password){
+                    successful.user = loginUser
                     return successful
                 } else {
                     return unsuccessful
