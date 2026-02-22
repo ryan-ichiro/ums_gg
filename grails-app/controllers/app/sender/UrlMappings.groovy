@@ -12,5 +12,15 @@ class UrlMappings {
         "500"(view:'/error')
         "404"(view:'/notFound')
 
+        group "/userInfo", {
+            get "/" (controller: "userInfo", action: "index", method: "GET")
+            post "/" (controller: "userInfo", action: "save", method: "POST")
+        }
+
+        group "/authorization", {
+            post "/login" (controller: "authorization", action: 'login', method: "POST")
+            post "/register" (controller: "authorization", action: 'register', method: "POST")
+        }
+
     }
 }
