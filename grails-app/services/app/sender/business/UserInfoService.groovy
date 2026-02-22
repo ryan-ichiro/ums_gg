@@ -22,11 +22,11 @@ class UserInfoService {
 
     @Transactional
     def createNewUser(request) {
-        def firstName = request.firstName
-        def lastName = request.lastName
-        def username = request.username
-        def password = request.password
-        def email = request.email
+        String firstName = request.firstName
+        String lastName = request.lastName
+        String username = request.username
+        String password = request.password
+        String email = request.email
 
         if(firstName == null
         || lastName == null
@@ -34,6 +34,12 @@ class UserInfoService {
         || password == null
         || email == null){
             throw new RuntimeException("Missing properties of user info in request.")
+        }
+
+        UserInfo check = UserInfo.findByEmail(email)
+
+        if(check){
+            return [code: 2, newUser: null, message: "A user with this email already exists."]
         }
 
         UserInfo newUser = new UserInfo()
@@ -49,6 +55,6 @@ class UserInfoService {
 
         newUser.save(failOnError: true, flush: true)
 
-        return newUser
+        return [code: 1, user: newUser, message: "Registration successful"]
     }
 }
