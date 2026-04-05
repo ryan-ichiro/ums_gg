@@ -22,5 +22,13 @@ class UrlMappings {
             post "/register" (controller: "authorization", action: 'register', method: "POST")
         }
 
+        group "/group", {
+            get "/" (controller: "group", action: "index", method: "GET")
+            get "/${id}" (controller: "group", action: "getByGroupId", method: "GET")
+            post "/" (controller: "group", action: "create", method: "POST")
+            put "/${id}" (controller: "group", action: "update", method: "PUT")
+            get "/getActive" (controller: "group", action: "getActiveTable", method: "GET")
+        }
+
     }
 }

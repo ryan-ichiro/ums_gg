@@ -50,6 +50,7 @@ class UserInfoService {
         newUser.password = password
         newUser.email = email
         newUser.verified = Boolean.FALSE
+        newUser.admin = Boolean.TRUE
         newUser.createdOnDatetime = ZonedDateTime.now()
         newUser.lastUpdatedOnDatetime = ZonedDateTime.now()
 

@@ -10,6 +10,7 @@ class UserInfo {
     String email
 
     Boolean verified
+    Boolean admin
 
     ZonedDateTime createdOnDatetime
     ZonedDateTime lastUpdatedOnDatetime
@@ -35,6 +36,7 @@ class UserInfo {
         email                   column: "USER_EMAIL"
 
         verified                column: "VERIFIED_BOOL"
+        admin                   column: "ADMIN_BOOL"
 
         createdOnDatetime       column: "CREATED_ON_DATETIME"
         lastUpdatedOnDatetime   column: "LAST_UPDATED_DATETIME"
