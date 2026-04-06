@@ -16,4 +16,8 @@ class GroupController {
     def create() {
         respond groupService.create(request.JSON)
     }
+
+    def update() {
+        respond groupService.update(request.JSON)
+    }
 }

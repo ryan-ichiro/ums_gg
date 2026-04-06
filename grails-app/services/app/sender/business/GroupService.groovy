@@ -11,20 +11,27 @@ class GroupService {
     }
 
     @Transactional
+    def getActiveTable () {
+
+    }
+
+    @Transactional
     def getByGroupId(Long groupId) {
         if(groupId == null) {
             throw new ResourceException("groupId of: ${groupId} is invalid")
         }
-        List<Group> group = Group.findAllById(groupId)
+        Group group = Group.findById(groupId)
 
-        if(group.size() === 0) {
-            return []
-        }
         return group
     }
 
     @Transactional
     def create(request) {
+        System.out.println(request)
+    }
+
+    @Transactional
+    def update(request) {
         System.out.println(request)
     }
 }
