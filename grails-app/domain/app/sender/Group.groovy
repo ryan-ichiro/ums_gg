@@ -19,7 +19,7 @@ class Group {
         name nullable: false
         isPrivate nullable: false
 
-        verified default: false
+//        verified default: false
     }
 
     static mapping = {

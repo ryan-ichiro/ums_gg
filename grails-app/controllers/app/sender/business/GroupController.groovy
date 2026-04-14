@@ -18,6 +18,6 @@ class GroupController {
     }
 
     def update() {
-        respond groupService.update(request.JSON)
+        respond groupService.update(request.JSON, params.id)
     }
 }

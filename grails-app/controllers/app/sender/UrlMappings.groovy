@@ -30,5 +30,11 @@ class UrlMappings {
             get "/getActive" (controller: "group", action: "getActiveTable", method: "GET")
         }
 
+        group "/groupUser", {
+            get "/" (controller: "groupUser", action: 'index', method: "GET")
+            post "/" (controller: "groupUser", action: 'create', method: "POST")
+            delete "/" (controller: "groupUser", action: 'delete', method: "DELETE")
+        }
+
     }
 }
